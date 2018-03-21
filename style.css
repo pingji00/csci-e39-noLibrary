@@ -1,0 +1,46 @@
+body {
+  background-color: #343434;
+  font-size: 300%;
+  min-height:100vh;
+  color: white;
+  font-family: sans-serif;
+}
+
+header {
+	background-color: red;
+	height: 20vh;
+}
+main {
+	background-color: green;
+	display: grid;
+	height: 70vh;
+	grid:	"artical aside" 2fr
+			"ads aside" 1fr
+			/ 2fr 1fr;
+	grid-gap: 20px;
+
+}
+main article {
+	grid-area: artical;
+	background-color: gold;
+}
+main section {
+	grid-area: ads;
+	background-color: pink;
+}
+main aside {
+	grid-area: aside;
+	background-color: seagreen;
+}
+footer {
+	background-color: blue;
+	height: 10vh;
+}
+@media (max-width: 768px) {
+	main {
+		grid:	"artical" 2fr
+				"ads" 1fr
+				"aside" 1fr
+				/ 1fr;
+	}
+}
